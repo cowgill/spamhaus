@@ -1,5 +1,5 @@
 ## Spamhaus DROP List ##
-A shell script that grabs the latest Spamhaus DROP List and adds it to iptables. We use this on our Ubuntu proxy server at AppThemes.
+A shell script that grabs the latest Spamhaus DROP List and adds it to iptables. We use this (among other tools) on our Ubuntu proxy server at [AppThemes](http://www.appthemes.com/) to cut down on spam and other malicious activity.
 
 ## Usage ##
 Place the script somewhere on your server.
