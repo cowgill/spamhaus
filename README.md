@@ -24,8 +24,8 @@ sudo iptables -L Spamhaus -n
 ## Automatic Updating ##
 In order for the list to automatically update each day, you'll need to setup a cron job with crontab.
 <pre>
-# fire up the crontab
-sudo crontab -e
+# fire up the crontab (no sudo)
+crontab -e
 
 # run the script every day at 3am
 0 3 * * * /usr/local/bin/spamhaus.sh
