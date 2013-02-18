@@ -6,13 +6,13 @@ Place the script somewhere on your server.
 
 <pre>
 # find a nice home
-cd /usr/local/bin/
+cd /home/YOUR-USERNAME/bin/
 
 # create the file and paste
-sudo vim spamhaus.sh
+vim spamhaus.sh
 
 # make it executable
-sudo chmod +x spamhaus.sh
+chmod +x spamhaus.sh
 
 # set it loose
 sudo ./spamhaus.sh
@@ -28,7 +28,7 @@ In order for the list to automatically update each day, you'll need to setup a c
 crontab -e
 
 # run the script every day at 3am
-0 3 * * * /usr/local/bin/spamhaus.sh
+0 3 * * * /home/YOUR-USERNAME/bin/spamhaus.sh
 </pre>
 
 
