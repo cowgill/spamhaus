@@ -21,13 +21,25 @@ $IPTABLES -L $CHAIN -n
 
 # check to see if the chain already exists
 if [ $? -eq 0 ]; then
+
     # flush the old rules
     $IPTABLES -F $CHAIN
+
     echo "Flushed old rules. Applying updated Spamhaus list...."    
+
 else
+
     # create a new chain set
     $IPTABLES -N $CHAIN
+
+    # tie chain to input rules so it runs
+    $IPTABLES -A INPUT -j $CHAIN
+
+    # don't allow this traffic through
+    $IPTABLES -A FORWARD -j $CHAIN
+
     echo "Chain not detected. Creating new chain and adding Spamhaus list...."
+
 fi;
 
 # get a copy of the spam list
