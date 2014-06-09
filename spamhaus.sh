@@ -8,7 +8,7 @@
 IPTABLES="/sbin/iptables";
 
 # list of known spammers
-URL="www.spamhaus.org/drop/drop.lasso";
+URL="http://www.spamhaus.org/drop/drop.lasso";
 
 # save local copy here
 FILE="/tmp/drop.lasso";
