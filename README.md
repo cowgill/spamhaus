@@ -1,5 +1,5 @@
 ## Spamhaus DROP List ##
-A shell script that grabs the latest Spamhaus DROP List and adds it to iptables. We use this (among other tools) on our Ubuntu proxy server at [AppThemes](http://www.appthemes.com/) to cut down on spam and other malicious activity.
+A shell script that grabs the latest Spamhaus DROP & EDROP Lists and adds them to iptables. We use this script (among other tools) on our Debian web server & Ubuntu proxy server at [AppThemes](http://www.appthemes.com/) to cut down on spam and other malicious activity.
 
 ## Usage ##
 Place the script somewhere on your server.
@@ -36,4 +36,7 @@ crontab -e
 If you need to remove all the Spamhaus rules, run the following:
 <pre>
 sudo iptables -F Spamhaus
+</pre>
+<pre>
+sudo iptables -F SpamhausAct
 </pre>
