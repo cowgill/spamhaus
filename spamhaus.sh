@@ -70,14 +70,13 @@ $IPTABLES -A $CHAINACT -p 0 -j LOG --log-prefix "[SPAMHAUS BLOCK]" -m limit --li
 # add the ip address drop rule to the action chain
 $IPTABLES -A $CHAINACT -p 0 -j DROP
 
-
-# get a copy of the spam list
 for bl in 1 2
 do
     URL="URL${bl}"
     URL="${!URL}"
     FILE="FILE${bl}"
     FILE="${!FILE}"
+    # get a copy of the spam list
     wget -qc ${URL} -O ${FILE}
 
     # iterate through all known spamming hosts
