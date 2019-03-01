@@ -5,7 +5,7 @@
 # http://www.cyberciti.biz/tips/block-spamming-scanning-with-iptables.html
 
 # path to iptables
-IPTABLES="/sbin/iptables";
+IPTABLES="/sbin/iptables -w";
 
 # list of known spammers
 URL="www.spamhaus.org/drop/drop.lasso";
