@@ -17,7 +17,7 @@ FILE="/tmp/drop.lasso";
 CHAIN="Spamhaus";
 
 # check to see if the chain already exists
-$IPTABLES -L $CHAIN -n
+$IPTABLES -L $CHAIN -n 2>/dev/null
 
 # check to see if the chain already exists
 if [ $? -eq 0 ]; then
